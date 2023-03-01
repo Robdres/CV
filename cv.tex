@@ -1,0 +1,235 @@
+\documentclass[12pt]{article} 
+\usepackage[a4paper, margin=0.5in]{geometry}
+\usepackage{trimclip}
+\usepackage{tabularx}
+\usepackage{tabto}
+\usepackage{blindtext}
+\usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{multicol}
+\usepackage{etoolbox}
+\usepackage{accsupp}
+\usepackage[fixed]{fontawesome5}
+\usepackage{ifxetex,ifluatex}
+\usepackage{scrlfile}
+\usepackage{xparse}
+\setlength{\columnseprule}{1pt}
+\usepackage{helvet}
+
+% \usepackage{sansmathfonts}
+% \usepackage[T1]{fontenc}
+
+\usepackage{DejaVuSansCondensed}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+\def\columnseprulecolor{\color{NavyBlue}}
+\newcommand{\itemmarker}{{\small\textbullet}}
+\newcommand{\ratingmarker}{\scriptsize\faCircle}
+\setlength{\parindent}{0cm}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=NavyBlue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\newenvironment{info}[2]
+{
+  \textbf{#1}: \tabto{1.5in}{#2}
+}{
+  \smallbreak
+}
+
+\newenvironment{til}[2]
+{
+  \large
+  \textcolor{NavyBlue}{\textbf{#1}}
+  \vspace{0.05in}
+  \textcolor{NavyBlue}{\hrule}
+}{
+  \vspace{0.05in}
+}
+
+\newenvironment{itemexp}[5]{
+  \textbf{#1} \hfill \begin{scriptsize}#2\end{scriptsize}\\
+  \scriptsize\textit{#3} \hfill \textit{#4}\\\normalsize
+  \footnotesize #5}{\smallbreak}
+
+\newcommand{\cvskill}[2]{%
+  \textcolor{black}{\footnotesize{#1}}\hfill
+  \BeginAccSupp{method=plain,ActualText={#2}}
+  \foreach \x in {1,...,5}{%
+    \ifdimequal{\x pt - #2 pt}{0.5pt}%
+    {\clipbox*{0pt -0.25ex {.5\width} {\totalheight}}{\color{NavyBlue}\ratingmarker}%
+     \clipbox*{{.5\width} -0.25ex {\width} {\totalheight}}{\color{NavyBlue!30}\ratingmarker}}
+    {\ifdimgreater{\x bp}{#2 bp}{\color{NavyBlue!20}}{\color{NavyBlue}}\ratingmarker}%
+  }\EndAccSupp{}
+  \smallbreak\par%
+}
+
+\newcommand{\subtitle}[2]{
+  \textcolor{NavyBlue}{\textbf{#1}} \textcolor{NavyBlue}{\faIcon[solid]{#2}}\smallbreak
+}{}
+
+\pagestyle{empty} % Suppress page numbers
+\usepackage{eso-pic}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage[explicit,]{titlesec}
+
+\AddToShipoutPictureBG{\color{NavyBlue!30}%
+\AtPageUpperLeft{\rule[-4.35cm]{\paperwidth}{5.5cm}}}%
+\AddToShipoutPictureBG{\color{NavyBlue!5}%
+\AtPageUpperLeft{\rule[-5.85cm]{\paperwidth}{1.6cm}}}%
+
+\begin{document}
+\medbreak
+\huge
+\textbf{Roberto Andrés Alvarado Moreira}
+\medbreak
+\footnotesize
+Motivado estudiante y programador dedicado al estudio de la matemática y sus aplicaciones
+dentro de la ciencia computacional y el desarrollo web, además apasionado sobre
+las nuevas tecnologías,
+inteligencia artificial, métodos de optimización y análisis numérico. Buscando
+oportunidades para aprender y adentrarme más en el mundo de las nuevas investigaciones tecnológicas
+\small
+\textcolor{NavyBlue}{
+  \begin{center}
+    \begin{tabularx}{0.8\textwidth} { 
+       >{\raggedright\arraybackslash}X 
+       >{\raggedright\arraybackslash}X}
+        \faIcon{envelope}{ robdres123@gmail.com} &\faIcon{github}
+        {\normalsize\url{https://github.com/Robdres}}\\[0.1cm]
+        \faIcon{mobile}{ (+593)988718378} &\faIcon{map} {\small Quito, Ecuador}\\
+    \end{tabularx}
+  \end{center}
+}
+\medbreak
+\normalsize
+\begin{minipage}[t]{0.3\textwidth}
+  \begin{til}{Herramientas}{1}
+  \end{til}
+  \medbreak
+  \footnotesize
+  \subtitle{Lenguajes}{globe}
+  \medbreak
+  \cvskill{Español}{5}
+  \cvskill{Inglés}{5}
+  \medbreak
+  \subtitle{Lenguajes de Programación}{laptop}
+  \medbreak
+  \cvskill{Python}{5}
+  \cvskill{MySQL}{4.5}
+  \cvskill{JavaScript}{4.5}
+  \cvskill{Java}{4}
+  \cvskill{Latex}{4}
+  \cvskill{Matlab}{3}
+  \cvskill{Rust}{3}
+  \medbreak
+  \subtitle{Herramientas de desarrollo}{keyboard}
+  \medbreak
+  \cvskill{Vim}{5}
+  \cvskill{Figma}{4}
+  \cvskill{VSCode}{3}
+  \medbreak
+  \subtitle{Plataformas}{ubuntu}
+  \medbreak
+  \cvskill{Linux}{5}
+  \cvskill{Docker}{3}
+  \cvskill{Windows}{3}
+  \medbreak
+  \subtitle{Frameworks y Librerías}{database}
+  \medbreak
+  \cvskill{Angular}{5}
+  \cvskill{TensorFlow}{4.5}
+  \cvskill{NodeJs}{4}
+  \medbreak
+
+  \begin{til}{Habilidades}{1}
+  \end{til}
+  \medbreak
+  \cvskill{Liderazgo}{5}
+  \cvskill{Pensamiento crítico}{5}
+  \cvskill{Trabajo en Equipo}{4}
+  \cvskill{Comunicación}{3.5}
+\vspace*{\fill}
+\end{minipage}
+\textcolor{NavyBlue}{\hfill\vline \hfill}
+\begin{minipage}[t]{0.61\textwidth}
+  \begin{til}{Experiencia Laboral}{1}
+  \end{til}
+  \smallbreak
+  \begin{itemexp}
+    {Programador Junior}{Enero,2022-Presente}{Tecsicom}{Quito, Ecuador}
+    {Con un pequeño grupo de desarrolladores logramos crear un servidor web, creado en el framework Angular, para una empresa de publicidad de Ecuador y
+  seguimos trabajando para mejorarla}
+  \end{itemexp}
+  \smallbreak
+  \begin{itemexp}
+    {Investigador}{Junio,2021-Presente}{Universidad
+    San Francisco de Quito}{Quito, Ecuador}
+    {En el laboratorio de inteligencia artificial de la USFQ, he sido parte de
+    la investigación de redes neuronales para encontrar aplicaciones al mundo
+    real de la inteligencia artificial}
+  \end{itemexp}
+  \smallbreak
+  \begin{itemexp}
+    {Asistente de cátedra}{Junio,2022-Presente}{Universidad
+    San Francisco de Quito}{Quito, Ecuador}
+    {He ayudado y colaborado junto al profesor David Hervas como su asistente de
+    cátedra}
+  \end{itemexp}
+  \begin{itemexp}
+    {Profesor Asistente}{Agosto,2019-Junio,2020}{Colegio de Bachillerato
+    Internacional Antonio Peña Celi}{Loja, Ecuador}
+    {Colaboré con varios profesores del colegio para manejar y mejorar el área
+    de matemáticas dentro del colegio además de ayudar en actividades
+  administrativas relacionadas con el Bachillerato Internacional}
+  \end{itemexp}
+  \smallbreak
+  \begin{til}{Educación}{1}
+  \end{til}
+  \smallbreak
+  \begin{itemexp}
+    {Licenciatura en Matemática}{Enero,2018-Presente}{Universidad
+    San Francisco de Quito}{Quito, Ecuador}
+    {\textit{Cursos}: Análisis Numérico, Redes Neuronales, Geometría
+    Diferencial, Análisis Real, Procesos Estocásticos}
+  \end{itemexp}
+  \smallbreak
+  \begin{itemexp}
+    {\small Ingeniería en Ciencias de la Computación}{Enero,2020-Presente}{Universidad
+    San Francisco de Quito}{Quito, Ecuador}
+    {\textit{Cursos}: Inteligencia Artificial, Base de datos, Arquitectura de
+    Computadores, Programación en Java, Programación en C++}
+  \end{itemexp}
+  \smallbreak
+  \begin{itemexp}
+    {Minor en Filosofía}{Junio,2018-Presente}{Universidad
+    San Francisco de Quito}{Quito, Ecuador}
+    {\textit{Cursos}: Filosofía de la religión, Historia de la filosofía, Process Philosophy,
+    Diálogos Platónicos}
+  \end{itemexp}
+  \smallbreak
+  \begin{til}{Proyectos}{1}
+  \end{til}
+  \begin{itemexp}
+    {Redes Neuronales}{Junio,2022-Presente}{Universidad
+    San Francisco de Quito}{Quito, Ecuador}
+    {He sido parte de un conjunto de proyectos en miras a ser publicados para la
+    creación de programas basados en la inteligencia artificial basados en visión
+    computacional}
+  \end{itemexp}
+  \begin{itemexp}
+    {Testores}{Agosto,2021-Presente}{Universidad
+    San Francisco de Quito}{Quito, Ecuador}
+    {Dentro del laboratorio de investigación de inteligencia artificial, he sido
+    parte del estudio de testores, o también conocidos como grupos rugosos de
+    características}
+  \end{itemexp}
+\end{minipage}
+\end{document}
