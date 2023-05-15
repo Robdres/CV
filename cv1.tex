@@ -1,0 +1,235 @@
+\documentclass[12pt]{article} 
+\usepackage[a4paper, margin=0.5in]{geometry}
+\usepackage{trimclip}
+\usepackage{tabularx}
+\usepackage{tabto}
+\usepackage{blindtext}
+\usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{multicol}
+\usepackage{etoolbox}
+\usepackage{accsupp}
+\usepackage[fixed]{fontawesome5}
+\usepackage{ifxetex,ifluatex}
+\usepackage{scrlfile}
+\usepackage{xparse}
+\setlength{\columnseprule}{1pt}
+\usepackage{helvet}
+
+% \usepackage{sansmathfonts}
+% \usepackage[T1]{fontenc}
+
+\usepackage{DejaVuSansCondensed}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+\def\columnseprulecolor{\color{Aquamarine}}
+\newcommand{\itemmarker}{{\small\textbullet}}
+\newcommand{\ratingmarker}{\scriptsize\faCircle}
+\setlength{\parindent}{0cm}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=Aquamarine,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\newenvironment{info}[2]
+{
+  \textbf{#1}: \tabto{1.5in}{#2}
+}{
+  \smallbreak
+}
+
+\newenvironment{til}[2]
+{
+  \large
+  \textcolor{Aquamarine}{\textbf{#1}}
+  \vspace{0.05in}
+  \textcolor{Aquamarine}{\hrule}
+}{
+  \vspace{0.05in}
+}
+
+\newenvironment{itemexp}[5]{
+  \textbf{#1} \hfill \begin{scriptsize}#2\end{scriptsize}\\
+  \scriptsize\textit{#3} \hfill \textit{#4}\\\normalsize
+  \footnotesize #5}{\smallbreak}
+
+\newcommand{\cvskill}[2]{%
+  \textcolor{black}{\footnotesize{#1}}\hfill
+  \BeginAccSupp{method=plain,ActualText={#2}}
+  \foreach \x in {1,...,5}{%
+    \ifdimequal{\x pt - #2 pt}{0.5pt}%
+    {\clipbox*{0pt -0.25ex {.5\width} {\totalheight}}{\color{Aquamarine}\ratingmarker}%
+     \clipbox*{{.5\width} -0.25ex {\width} {\totalheight}}{\color{Aquamarine!30}\ratingmarker}}
+    {\ifdimgreater{\x bp}{#2 bp}{\color{Aquamarine!20}}{\color{Aquamarine}}\ratingmarker}%
+  }\EndAccSupp{}
+  \smallbreak\par%
+}
+
+\newcommand{\subtitle}[2]{
+  \textcolor{Aquamarine}{\textbf{#1}} \textcolor{Aquamarine}{\faIcon[solid]{#2}}\smallbreak
+}{}
+
+\pagestyle{empty} % Suppress page numbers
+\usepackage{eso-pic}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage[explicit,]{titlesec}
+
+\AddToShipoutPictureBG{\color{Aquamarine!30}%
+\AtPageUpperLeft{\rule[-4.35cm]{\paperwidth}{5.5cm}}}%
+\AddToShipoutPictureBG{\color{Aquamarine!5}%
+\AtPageUpperLeft{\rule[-5.85cm]{\paperwidth}{1.6cm}}}%
+
+\begin{document}
+\medbreak
+\huge
+\textbf{Roberto Andrés Alvarado Moreira}
+\medbreak
+\footnotesize
+\small
+Motivated student and programmer dedicated to the study of mathematics and its applications
+within computer science and web development, also passionate about
+the new technologies,
+artificial intelligence, optimization methods and numerical analysis. Searching
+opportunities to learn and delve deeper into the world of new technological research
+\textcolor{Aquamarine}{
+  \begin{center}
+    \begin{tabularx}{0.8\textwidth} { 
+       >{\raggedright\arraybackslash}X 
+       >{\raggedright\arraybackslash}X}
+        \faIcon{envelope}{ robdres123@gmail.com} &\faIcon{github}
+        {\normalsize\url{https://github.com/Robdres}}\\[0.1cm]
+        \faIcon{mobile}{ (+593)988718378} &\faIcon{map} {\small Quito, Ecuador}\\
+    \end{tabularx}
+  \end{center}
+}
+\medbreak
+\normalsize
+\begin{minipage}[t]{0.3\textwidth}
+  \begin{til}{Tools}{1}
+  \end{til}
+  \medbreak
+  \footnotesize
+  \subtitle{Languages}{globe}
+  \medbreak
+  \cvskill{Spanish}{5}
+  \cvskill{English}{5}
+  \medbreak
+  \subtitle{Programming Languages}{laptop}
+  \medbreak
+  \cvskill{Python}{5}
+  \cvskill{MySQL}{4.5}
+  \cvskill{JavaScript}{4.5}
+  \cvskill{Java}{4}
+  \cvskill{Latex}{4}
+  \cvskill{Matlab}{3}
+  \cvskill{Rust}{3}
+  \medbreak
+  \subtitle{Developer Tools}{keyboard}
+  \medbreak
+  \cvskill{Vim}{5}
+  \cvskill{Git}{5}
+  \cvskill{Figma}{4}
+  \cvskill{VSCode}{3}
+  \medbreak
+  \subtitle{Platforms}{ubuntu}
+  \medbreak
+  \cvskill{Linux}{5}
+  \cvskill{Docker}{3}
+  \cvskill{Windows}{3}
+  \medbreak
+  \subtitle{Frameworks y Libraries}{database}
+  \medbreak
+  \cvskill{Angular}{5}
+  \cvskill{TensorFlow}{4.5}
+  \cvskill{NodeJs}{4}
+  \medbreak
+
+  \begin{til}{Skills}{1}
+  \end{til}
+  \medbreak
+  \cvskill{Leadership}{5}
+  \cvskill{Critical Thinking}{5}
+  \cvskill{Teamwork}{4}
+  \cvskill{Communication}{3.5}
+\vspace*{\fill}
+\end{minipage}
+\textcolor{Aquamarine}{\hfill\vline \hfill}
+\begin{minipage}[t]{0.61\textwidth}
+  \begin{til}{Professional Experience}{1}
+  \end{til}
+  \smallbreak
+  \begin{itemexp}
+    {Junior Programmer}{January,2022-Present}{Tecsicom}{Quito, Ecuador}
+    {With a small group of programmers we were able to create a complete Angular
+    based website for the daily operations of one of the biggest marketing
+    companies in Ecuador}
+  \end{itemexp}
+  \smallbreak
+  \begin{itemexp}
+    {Researcher}{June,2021-Present}{Universidad
+    San Francisco de Quito}{Quito, Ecuador}
+    {Along with all my teammates in the artificial intelligence laboratory in
+    the university, we have used neural networks to learn and create new
+    applications for AI in our environment} 
+  \end{itemexp}
+  \smallbreak
+  \begin{itemexp}
+    {Teaching Assistant}{June,2022-Present}{Universidad
+    San Francisco de Quito}{Quito, Ecuador}
+    {I have helped and collaborated with David Hervas, Math PhD, with academic
+    activities}
+  \end{itemexp}
+  \begin{itemexp}
+    {Substitute Teacher}{August,2019-June,2020}{Colegio de Bachillerato
+    Internacional Antonio Peña Celi}{Loja, Ecuador}
+    {I was able to take part rapidly with high-school activities in order to
+    still have a great experience in math and physics class}
+  \end{itemexp}
+  \smallbreak
+  \begin{til}{Education}{1}
+  \end{til}
+  \smallbreak
+  \begin{itemexp}
+    {Math mayor}{January,2018-Present}{Universidad
+    San Francisco de Quito}{Quito, Ecuador}
+    {\textit{Courses}: Numerical Analysis, Neural Networks, Differential 
+    Geometry, Real Analysis, Stochastic Processes }
+  \end{itemexp}
+  \smallbreak
+  \begin{itemexp}
+    {Computer Science Mayor}{January,2020-Present}{Universidad
+    San Francisco de Quito}{Quito, Ecuador}
+    {\textit{Courses}: Artificial Intelligence, Databases, Computer
+    Architecture, Java Programming, C++ Programming}
+  \end{itemexp}
+  \smallbreak
+  \begin{itemexp}
+    {Philosophy Minor}{January,2018-Present}{Universidad
+    San Francisco de Quito}{Quito, Ecuador}
+    {\textit{Courses}: Philosophy of Religion, History of philosophy , Process
+      Philosophy, Platonic Dialogues}
+  \end{itemexp}
+  \smallbreak
+  \begin{til}{Projects}{1}
+  \end{til}
+  \begin{itemexp}
+    {Neural Networks}{June,2022-Present}{Universidad
+    San Francisco de Quito}{Quito, Ecuador}
+    {Inside the AI Lab, I am able to be a part of many computer vision projects,
+    many of them them guided by me. I am able to learn and continue working on
+    actual applications of AI inside our world }
+  \end{itemexp}
+  \begin{itemexp}
+    {Testors}{August,2021-Present}{Universidad
+    San Francisco de Quito}{Quito, Ecuador}
+    {I am able to learn and participate in many projects that involve the use of
+    testors, also known as rough sets, in order to reach better processing times}
+  \end{itemexp}
+\end{minipage}
+\end{document}
