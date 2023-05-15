@@ -1,5 +1,5 @@
-\documentclass[12pt]{article} 
-\usepackage[a4paper, margin=0.5in]{geometry}
+\documentclass[11pt]{article} 
+\usepackage[a4paper, margin=0.4in]{geometry}
 \usepackage{trimclip}
 \usepackage{tabularx}
 \usepackage{tabto}
@@ -70,8 +70,17 @@
   \smallbreak\par%
 }
 
+\newcommand{\cvcertificate}[2]{%
+
+  \textcolor{black}{\footnotesize{#1}}\smallbreak
+
+  \tiny {#2}
+  \smallbreak\par%
+}
+
 \newcommand{\subtitle}[2]{
   \textcolor{Aquamarine}{\textbf{#1}} \textcolor{Aquamarine}{\faIcon[solid]{#2}}\smallbreak
+
 }{}
 
 \pagestyle{empty} % Suppress page numbers
@@ -81,9 +90,9 @@
 \usepackage[explicit,]{titlesec}
 
 \AddToShipoutPictureBG{\color{Aquamarine!30}%
-\AtPageUpperLeft{\rule[-4.35cm]{\paperwidth}{5.5cm}}}%
+\AtPageUpperLeft{\rule[-3.8cm]{\paperwidth}{5.8cm}}}%
 \AddToShipoutPictureBG{\color{Aquamarine!5}%
-\AtPageUpperLeft{\rule[-5.85cm]{\paperwidth}{1.6cm}}}%
+\AtPageUpperLeft{\rule[-4.7cm]{\paperwidth}{1.45cm}}}%
 
 \begin{document}
 \medbreak
@@ -102,7 +111,7 @@ opportunities to learn and delve deeper into the world of new technological rese
     \begin{tabularx}{0.8\textwidth} { 
        >{\raggedright\arraybackslash}X 
        >{\raggedright\arraybackslash}X}
-        \faIcon{envelope}{ robdres123@gmail.com} &\faIcon{github}
+        \faIcon{envelope}{raalvaradom@hotmail.com} &\faIcon{github}
         {\normalsize\url{https://github.com/Robdres}}\\[0.1cm]
         \faIcon{mobile}{ (+593)988718378} &\faIcon{map} {\small Quito, Ecuador}\\
     \end{tabularx}
@@ -127,7 +136,7 @@ opportunities to learn and delve deeper into the world of new technological rese
   \cvskill{JavaScript}{4.5}
   \cvskill{Java}{4}
   \cvskill{Latex}{4}
-  \cvskill{Matlab}{3}
+  \cvskill{C++}{4}
   \cvskill{Rust}{3}
   \medbreak
   \subtitle{Developer Tools}{keyboard}
@@ -149,7 +158,6 @@ opportunities to learn and delve deeper into the world of new technological rese
   \cvskill{TensorFlow}{4.5}
   \cvskill{NodeJs}{4}
   \medbreak
-
   \begin{til}{Skills}{1}
   \end{til}
   \medbreak
@@ -157,6 +165,15 @@ opportunities to learn and delve deeper into the world of new technological rese
   \cvskill{Critical Thinking}{5}
   \cvskill{Teamwork}{4}
   \cvskill{Communication}{3.5}
+
+  \medbreak
+  \begin{til}{Certificates}{1}
+  \medbreak
+  \medbreak
+    \cvcertificate{Huawei Technologies, Seed for the Future, Leadership in Engineering
+    Bootcamp}{October,2022}
+  \end{til}
+  \medbreak
 \vspace*{\fill}
 \end{minipage}
 \textcolor{Aquamarine}{\hfill\vline \hfill}
@@ -165,7 +182,7 @@ opportunities to learn and delve deeper into the world of new technological rese
   \end{til}
   \smallbreak
   \begin{itemexp}
-    {Junior Programmer}{January,2022-Present}{Tecsicom}{Quito, Ecuador}
+    {Junior Programmer}{January,2022-Febraury 2023}{Tecsicom}{Quito, Ecuador}
     {With a small group of programmers we were able to create a complete Angular
     based website for the daily operations of one of the biggest marketing
     companies in Ecuador}
@@ -180,37 +197,38 @@ opportunities to learn and delve deeper into the world of new technological rese
   \end{itemexp}
   \smallbreak
   \begin{itemexp}
-    {Teaching Assistant}{June,2022-Present}{Universidad
+    {Data Analysist}{May,2023-Present}{Ney Torres Investment Fund}{Quito, Ecuador}
+    {In charge to analyse and work with financial datasets to assess and improve
+    stock trading analysis} 
+  \end{itemexp}
+  \smallbreak
+  \smallbreak
+  \begin{itemexp}
+    {Teaching Assistant}{June,2022-March,2023}{Universidad
     San Francisco de Quito}{Quito, Ecuador}
     {I have helped and collaborated with David Hervas, Math PhD, with academic
     activities}
-  \end{itemexp}
-  \begin{itemexp}
-    {Substitute Teacher}{August,2019-June,2020}{Colegio de Bachillerato
-    Internacional Antonio Peña Celi}{Loja, Ecuador}
-    {I was able to take part rapidly with high-school activities in order to
-    still have a great experience in math and physics class}
   \end{itemexp}
   \smallbreak
   \begin{til}{Education}{1}
   \end{til}
   \smallbreak
   \begin{itemexp}
-    {Math mayor}{January,2018-Present}{Universidad
+    {Math Mayor}{January,2019-May,2023}{Universidad
     San Francisco de Quito}{Quito, Ecuador}
     {\textit{Courses}: Numerical Analysis, Neural Networks, Differential 
     Geometry, Real Analysis, Stochastic Processes }
   \end{itemexp}
   \smallbreak
   \begin{itemexp}
-    {Computer Science Mayor}{January,2020-Present}{Universidad
+    {Computer Science Mayor}{January,2020-May,2024}{Universidad
     San Francisco de Quito}{Quito, Ecuador}
     {\textit{Courses}: Artificial Intelligence, Databases, Computer
     Architecture, Java Programming, C++ Programming}
   \end{itemexp}
   \smallbreak
   \begin{itemexp}
-    {Philosophy Minor}{January,2018-Present}{Universidad
+    {Philosophy Minor}{January,2018-May,2024}{Universidad
     San Francisco de Quito}{Quito, Ecuador}
     {\textit{Courses}: Philosophy of Religion, History of philosophy , Process
       Philosophy, Platonic Dialogues}
@@ -221,15 +239,29 @@ opportunities to learn and delve deeper into the world of new technological rese
   \begin{itemexp}
     {Neural Networks}{June,2022-Present}{Universidad
     San Francisco de Quito}{Quito, Ecuador}
-    {Inside the AI Lab, I am able to be a part of many computer vision projects,
-    many of them them guided by me. I am able to learn and continue working on
-    actual applications of AI inside our world }
+    {Work inside many computer vision projects,
+    many of them them guided by me. Learning and creating  
+    usefull applications of AI inside our world }
   \end{itemexp}
   \begin{itemexp}
     {Testors}{August,2021-Present}{Universidad
-    San Francisco de Quito}{Quito, Ecuador}
-    {I am able to learn and participate in many projects that involve the use of
-    testors, also known as rough sets, in order to reach better processing times}
+    San Francisco de Quito}{}
+    {Learn and participate in many projects that involve the use of
+    testors, also known as rough sets, in order to reach better processing times
+    by reducing the number of attributes necessary for classification processes}
+  \end{itemexp}
+  \begin{itemexp}
+    {Palm Tree}{January,2023-May,2023}{}{Quito, Ecuador}{
+    Alongside professor Miguel Castillo from NC State University, it was
+    possible to work with a database of the Palm Tree, to create metrics to
+    analyse the performance of difference infrared measure devices.
+    }
+  \end{itemexp}
+  \begin{itemexp}
+    {Computer Vision}{January,2023-Present}{}{Quito, Ecuador}{
+    Alongside professor Julio Ibarra from USFQ, the computer vision project will
+    try to reconstruct a face based on a photograph
+    }
   \end{itemexp}
 \end{minipage}
 \end{document}
