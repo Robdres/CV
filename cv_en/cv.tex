@@ -4,8 +4,7 @@
 \usepackage{tabularx}
 \usepackage{tabto}
 \usepackage{blindtext}
-\usepackage{hyperref}
-\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref} \usepackage[dvipsnames]{xcolor}
 \usepackage{multicol}
 \usepackage{etoolbox}
 \usepackage{accsupp}
@@ -27,12 +26,13 @@
 \newcommand{\itemmarker}{{\small\textbullet}}
 \newcommand{\ratingmarker}{\scriptsize\faCircle}
 \setlength{\parindent}{0cm}
+
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
     filecolor=magenta,      
     urlcolor=Aquamarine,
-    pdftitle={Overleaf Example},
+    pdftitle={cv},
     pdfpagemode=FullScreen,
     }
 
@@ -71,16 +71,17 @@
 }
 
 \newcommand{\cvcertificate}[2]{%
-
-  \textcolor{black}{\footnotesize{#1}}\smallbreak
-
+  \small{\textcolor{black}{\footnotesize{#1}}}\smallbreak
   \tiny {#2}
   \smallbreak\par%
 }
 
 \newcommand{\subtitle}[2]{
   \textcolor{Aquamarine}{\textbf{#1}} \textcolor{Aquamarine}{\faIcon[solid]{#2}}\smallbreak
+}{}
 
+\newcommand{\subsubtitle}[1]{
+  \textcolor{Aquamarine}{\small\textbf{#1}}\smallbreak
 }{}
 
 \pagestyle{empty} % Suppress page numbers
@@ -90,33 +91,37 @@
 \usepackage[explicit,]{titlesec}
 
 \AddToShipoutPictureBG{\color{Aquamarine!30}%
-\AtPageUpperLeft{\rule[-3.8cm]{\paperwidth}{5.8cm}}}%
+\AtPageUpperLeft{\rule[-5cm]{\paperwidth}{5.8cm}}}%
 \AddToShipoutPictureBG{\color{Aquamarine!5}%
-\AtPageUpperLeft{\rule[-4.7cm]{\paperwidth}{1.45cm}}}%
+\AtPageUpperLeft{\rule[-5.8cm]{\paperwidth}{2cm}}}%
 
 \begin{document}
 \medbreak
 \huge
 \textbf{Roberto Andrés Alvarado Moreira}
 \medbreak
+\medbreak
 \footnotesize
-\small
-Motivated student and programmer dedicated to the study of mathematics and its applications
-within computer science and web development, also passionate about
-the new technologies,
-artificial intelligence, optimization methods and numerical analysis. Searching
-opportunities to learn and delve deeper into the world of new technological research
+\normalsize
+Motivated programmer and researcher dedicated to the study of mathematics and
+its applications within computer science, passionate about the new
+technologies, artificial intelligence, optimization methods and numerical
+analysis. Searching opportunities to learn and delve deeper into the world of
+new technological research
 \textcolor{Aquamarine}{
   \begin{center}
     \begin{tabularx}{0.8\textwidth} { 
        >{\raggedright\arraybackslash}X 
        >{\raggedright\arraybackslash}X}
-        \faIcon{envelope}{raalvaradom@hotmail.com} &\faIcon{github}
+        \faIcon{envelope}{ raalvaradom@hotmail.com } &\faIcon{github}
         {\normalsize\url{https://github.com/Robdres}}\\[0.1cm]
-        \faIcon{mobile}{ (+593)988718378} &\faIcon{map} {\small Quito, Ecuador}\\
+        \faIcon{mobile}{ (+56) 928588819} &\faIcon{map} {\small Santiago, Chile}\\
     \end{tabularx}
   \end{center}
 }
+\medbreak
+\medbreak
+\medbreak
 \medbreak
 \normalsize
 \begin{minipage}[t]{0.3\textwidth}
@@ -132,31 +137,33 @@ opportunities to learn and delve deeper into the world of new technological rese
   \subtitle{Programming Languages}{laptop}
   \medbreak
   \cvskill{Python}{5}
+  \cvskill{C++}{4.5}
   \cvskill{MySQL}{4.5}
-  \cvskill{JavaScript}{4.5}
-  \cvskill{Java}{4}
+  \cvskill{JavaScript}{4}
   \cvskill{Latex}{4}
-  \cvskill{C++}{4}
+  \cvskill{Java}{3}
   \cvskill{Rust}{3}
   \medbreak
   \subtitle{Developer Tools}{keyboard}
   \medbreak
   \cvskill{Vim}{5}
   \cvskill{Git}{5}
-  \cvskill{Figma}{4}
-  \cvskill{VSCode}{3}
-  \medbreak
-  \subtitle{Platforms}{ubuntu}
-  \medbreak
   \cvskill{Linux}{5}
-  \cvskill{Docker}{3}
-  \cvskill{Windows}{3}
+  \cvskill{Perforce}{4}
+  \cvskill{Jira}{3}
   \medbreak
   \subtitle{Frameworks y Libraries}{database}
   \medbreak
-  \cvskill{Angular}{5}
+  \subsubtitle{C++}
+  \cvskill{Curses}{5}
+  \cvskill{Ogre3D}{3}
+  \subsubtitle{JavaScript}
+  \cvskill{Angular}{4.5}
+  \cvskill{NodeJs}{4.5}
+  \cvskill{React}{3}
+  \subsubtitle{Python}
   \cvskill{TensorFlow}{4.5}
-  \cvskill{NodeJs}{4}
+  \cvskill{Numpy}{4.5}
   \medbreak
   \begin{til}{Skills}{1}
   \end{til}
@@ -169,8 +176,7 @@ opportunities to learn and delve deeper into the world of new technological rese
   \medbreak
   \begin{til}{Certificates}{1}
   \medbreak
-  \medbreak
-    \cvcertificate{Huawei Technologies, Seed for the Future, Leadership in Engineering
+    \cvcertificate{Huawei Technologies, Leadership in Engineering
     Bootcamp}{October,2022}
   \end{til}
   \medbreak
@@ -178,18 +184,24 @@ opportunities to learn and delve deeper into the world of new technological rese
 \end{minipage}
 \textcolor{Aquamarine}{\hfill\vline \hfill}
 \begin{minipage}[t]{0.61\textwidth}
-  \begin{til}{Professional Experience}{1}
-  \end{til}
+  \begin{til}{Professional Experience}{1}\end{til}
   \smallbreak
   \begin{itemexp}
-    {Junior Programmer}{January,2022-Febraury 2023}{Tecsicom}{Quito, Ecuador}
+    {R\&D Junior Programmer}{June,2023 - Present}{Synopsys}{Santiago, Chile}
+    {In my current job as a research and development I was part of a group that
+    manages and is in charge of chip verification. In just a few months, I
+    learn enough to be left in charge of a complete tool in the process and I
+    was able to create many tools to improve developer everyday work}
+  \end{itemexp}
+  \begin{itemexp}
+    {Junior Programmer}{January,2022 - February 2023}{Tecsicom}{Quito, Ecuador}
     {With a small group of programmers we were able to create a complete Angular
     based website for the daily operations of one of the biggest marketing
     companies in Ecuador}
   \end{itemexp}
   \smallbreak
   \begin{itemexp}
-    {Researcher}{June,2021-Present}{Universidad
+    {Researcher}{June,2021 - May,2023}{Universidad
     San Francisco de Quito}{Quito, Ecuador}
     {Along with all my teammates in the artificial intelligence laboratory in
     the university, we have used neural networks to learn and create new
@@ -197,16 +209,17 @@ opportunities to learn and delve deeper into the world of new technological rese
   \end{itemexp}
   \smallbreak
   \begin{itemexp}
-    {Data Analysist}{May,2023-Present}{Ney Torres Investment Fund}{Quito, Ecuador}
+    {Data Analyst Internship}{May,2023 - June,2023}{Ney Torres Investment Fund}{Quito, Ecuador}
     {In charge to analyse and work with financial datasets to assess and improve
-    stock trading analysis} 
+    stock trading analysis, in my short time I learned about the basics of trading
+    enough to create a tool that makes a comparison analysis of financial metric} 
   \end{itemexp}
   \smallbreak
   \smallbreak
   \begin{itemexp}
-    {Teaching Assistant}{June,2022-March,2023}{Universidad
+    {Teaching Assistant}{June,2022 - March,2023}{Universidad
     San Francisco de Quito}{Quito, Ecuador}
-    {I have helped and collaborated with David Hervas, Math PhD, with academic
+    {I helped and collaborated with David Hervas, Math PhD, with academic
     activities}
   \end{itemexp}
   \smallbreak
@@ -214,53 +227,48 @@ opportunities to learn and delve deeper into the world of new technological rese
   \end{til}
   \smallbreak
   \begin{itemexp}
+<<<<<<< HEAD:cv_en/cv.tex
     {Math Major}{January,2019-May,2023}{Universidad
+=======
+    {Math Major}{January,2019 - May,2023}{Universidad
+>>>>>>> 609826bccd10c833205a3b3a1ba01127d34a17e1:cv1.tex
     San Francisco de Quito}{Quito, Ecuador}
     {\textit{Courses}: Numerical Analysis, Neural Networks, Differential 
     Geometry, Real Analysis, Stochastic Processes }
   \end{itemexp}
   \smallbreak
   \begin{itemexp}
+<<<<<<< HEAD:cv_en/cv.tex
     {Computer Science Major}{January,2020-May,2024}{Universidad
+=======
+    {Computer Science Major}{January,2020 - May,2024}{Universidad
+>>>>>>> 609826bccd10c833205a3b3a1ba01127d34a17e1:cv1.tex
     San Francisco de Quito}{Quito, Ecuador}
     {\textit{Courses}: Artificial Intelligence, Databases, Computer
     Architecture, Java Programming, C++ Programming}
   \end{itemexp}
   \smallbreak
   \begin{itemexp}
-    {Philosophy Minor}{January,2018-May,2024}{Universidad
+    {Philosophy Minor}{January,2018 - May,2024}{Universidad
     San Francisco de Quito}{Quito, Ecuador}
-    {\textit{Courses}: Philosophy of Religion, History of philosophy , Process
+    {\textit{Courses}: Philosophy of Religion, History of Philosophy, Process
       Philosophy, Platonic Dialogues}
   \end{itemexp}
   \smallbreak
   \begin{til}{Projects}{1}
   \end{til}
   \begin{itemexp}
-    {Neural Networks}{June,2022-Present}{Universidad
-    San Francisco de Quito}{Quito, Ecuador}
-    {Work inside many computer vision projects,
-    many of them them guided by me. Learning and creating  
-    usefull applications of AI inside our world }
-  \end{itemexp}
-  \begin{itemexp}
-    {Testors}{August,2021-Present}{Universidad
+    {Testors}{August,2021 - May,2023}{Universidad
     San Francisco de Quito}{}
     {Learn and participate in many projects that involve the use of
     testors, also known as rough sets, in order to reach better processing times
     by reducing the number of attributes necessary for classification processes}
   \end{itemexp}
   \begin{itemexp}
-    {Palm Tree}{January,2023-May,2023}{}{Quito, Ecuador}{
+    {Palm Tree}{January,2023 - May,2023}{}{Quito, Ecuador}{
     Alongside professor Miguel Castillo from NC State University, it was
     possible to work with a database of the Palm Tree, to create metrics to
     analyse the performance of difference infrared measure devices.
-    }
-  \end{itemexp}
-  \begin{itemexp}
-    {Computer Vision}{January,2023-Present}{}{Quito, Ecuador}{
-    Alongside professor Julio Ibarra from USFQ, the computer vision project will
-    try to reconstruct a face based on a photograph
     }
   \end{itemexp}
 \end{minipage}
