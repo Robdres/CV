@@ -1,7 +1,8 @@
-\documentclass[11pt]{article} 
+\documentclass[11pt]{article}
 \usepackage[a4paper, margin=0.4in]{geometry}
 \usepackage{trimclip}
 \usepackage{tabularx}
+\usepackage[outline]{contour}% http://ctan.org/pkg/contour
 \usepackage{tabto}
 \usepackage{blindtext}
 \usepackage{hyperref} \usepackage[dvipsnames]{xcolor}
@@ -22,6 +23,7 @@
 \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
 \usepackage[T1]{fontenc}
 
+\definecolor{Aquamarine}{rgb}{0.11, 0.34,0.45 }
 \def\columnseprulecolor{\color{Aquamarine}}
 \newcommand{\itemmarker}{{\small\textbullet}}
 \newcommand{\ratingmarker}{\scriptsize\faCircle}
@@ -30,7 +32,7 @@
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
-    filecolor=magenta,      
+    filecolor=magenta,
     urlcolor=Aquamarine,
     pdftitle={cv},
     pdfpagemode=FullScreen,
@@ -54,12 +56,14 @@
 }
 
 \newenvironment{itemexp}[5]{
-  \textbf{#1} \hfill \begin{scriptsize}#2\end{scriptsize}\\
+  \contourlength{0.22pt}
+  \contournumber{10}%
+  \contour{black}{#1} \hfill \begin{scriptsize}#2\end{scriptsize}\\
   \scriptsize\textit{#3} \hfill \textit{#4}\\\normalsize
-  \footnotesize #5}{\smallbreak}
+  \normalsize #5}{\smallbreak}
 
 \newcommand{\cvskill}[2]{%
-  \textcolor{black}{\footnotesize{#1}}\hfill
+  \textcolor{black}{\small{#1}}\hfill
   \BeginAccSupp{method=plain,ActualText={#2}}
   \foreach \x in {1,...,5}{%
     \ifdimequal{\x pt - #2 pt}{0.5pt}%
@@ -90,28 +94,26 @@
 \usepackage{fancyhdr}
 \usepackage[explicit,]{titlesec}
 
-\AddToShipoutPictureBG{\color{Aquamarine!30}%
-\AtPageUpperLeft{\rule[-5cm]{\paperwidth}{5.8cm}}}%
-\AddToShipoutPictureBG{\color{Aquamarine!5}%
-\AtPageUpperLeft{\rule[-5.8cm]{\paperwidth}{2cm}}}%
 
 \begin{document}
 \medbreak
 \huge
-\textbf{Roberto Andrés Alvarado Moreira}
-\medbreak
+\contourlength{0.22pt}
+\contournumber{10}%
+\contour{black}{Roberto Andrés Alvarado Moreira}
 \medbreak
 \footnotesize
 \normalsize
-Motivated programmer and researcher dedicated to the study of mathematics and
-its applications within computer science, passionate about the new
-technologies, artificial intelligence, optimization methods and numerical
-analysis. Searching opportunities to learn and delve deeper into the world of
-new technological research
+I'm a math major turned programmer with a focus on
+machine learning, C++, and data science. In my free,
+time I like to learn about videogame development
+
+\vspace{-0.45cm}
+\small
 \textcolor{Aquamarine}{
   \begin{center}
-    \begin{tabularx}{0.8\textwidth} { 
-       >{\raggedright\arraybackslash}X 
+    \begin{tabularx}{0.8\textwidth} {
+       >{\raggedright\arraybackslash}X
        >{\raggedright\arraybackslash}X}
         \faIcon{envelope}{ raalvaradom@hotmail.com } &\faIcon{github}
         {\normalsize\url{https://github.com/Robdres}}\\[0.1cm]
@@ -119,30 +121,32 @@ new technological research
     \end{tabularx}
   \end{center}
 }
-\medbreak
-\medbreak
-\medbreak
-\medbreak
 \normalsize
+
+\medbreak
+\vspace{-0.05cm}
 \begin{minipage}[t]{0.3\textwidth}
-  \begin{til}{Tools}{1}
+  \begin{til}{Tools*}{1}
   \end{til}
+  \medbreak
+  \scriptsize
+  \textit{[*] Scores presented are relative to the duration of my experience with each tool or skill.}
   \medbreak
   \footnotesize
   \subtitle{Languages}{globe}
   \medbreak
   \cvskill{Spanish}{5}
-  \cvskill{English}{5}
+  \cvskill{English}{4.5}
   \medbreak
   \subtitle{Programming Languages}{laptop}
   \medbreak
   \cvskill{Python}{5}
   \cvskill{C++}{4.5}
-  \cvskill{MySQL}{4.5}
+  \cvskill{Rust}{4}
   \cvskill{JavaScript}{4}
-  \cvskill{Latex}{4}
-  \cvskill{Java}{3}
-  \cvskill{Rust}{3}
+  \cvskill{Latex}{3}
+  %\cvskill{Java}{4}
+  \cvskill{MySQL}{3}
   \medbreak
   \subtitle{Developer Tools}{keyboard}
   \medbreak
@@ -155,15 +159,16 @@ new technological research
   \subtitle{Frameworks y Libraries}{database}
   \medbreak
   \subsubtitle{C++}
-  \cvskill{Curses}{5}
+  \cvskill{Curses}{4}
   \cvskill{Ogre3D}{3}
   \subsubtitle{JavaScript}
   \cvskill{Angular}{4.5}
   \cvskill{NodeJs}{4.5}
-  \cvskill{React}{3}
+  \cvskill{Vue}{3}
   \subsubtitle{Python}
   \cvskill{TensorFlow}{4.5}
   \cvskill{Numpy}{4.5}
+  \cvskill{MatplotLib}{4.5}
   \medbreak
   \begin{til}{Skills}{1}
   \end{til}
@@ -187,32 +192,22 @@ new technological research
   \begin{til}{Professional Experience}{1}\end{til}
   \smallbreak
   \begin{itemexp}
-    {R\&D Junior Programmer}{June,2023 - Present}{Synopsys}{Santiago, Chile}
-    {In my current job as a research and development I was part of a group that
-    manages and is in charge of chip verification. In just a few months, I
-    learn enough to be left in charge of a complete tool in the process and I
-    was able to create many tools to improve developer everyday work}
+    {Junior Engineer}{June,2023 - Present}{Synopsys}{Santiago, Chile}
+    {In my current job, as a research and development engineer, I am part of a group that
+    is in charge of maintaining and creating chip verification algorithms}
   \end{itemexp}
   \begin{itemexp}
-    {Junior Programmer}{January,2022 - February 2023}{Tecsicom}{Quito, Ecuador}
+    {Junior Fullstack Engineer}{January,2022 - February 2023}{Tecsicom}{Quito, Ecuador}
     {With a small group of programmers we were able to create a complete Angular
     based website for the daily operations of one of the biggest marketing
     companies in Ecuador}
   \end{itemexp}
   \smallbreak
   \begin{itemexp}
-    {Researcher}{June,2021 - May,2023}{Universidad
-    San Francisco de Quito}{Quito, Ecuador}
-    {Along with all my teammates in the artificial intelligence laboratory in
-    the university, we have used neural networks to learn and create new
-    applications for AI in our environment} 
-  \end{itemexp}
-  \smallbreak
-  \begin{itemexp}
-    {Data Analyst Internship}{May,2023 - June,2023}{Ney Torres Investment Fund}{Quito, Ecuador}
+    {Quant Internship}{May,2023 - June,2023}{Ney Torres Investment Fund}{Quito, Ecuador}
     {In charge to analyse and work with financial datasets to assess and improve
     stock trading analysis, in my short time I learned about the basics of trading
-    enough to create a tool that makes a comparison analysis of financial metric} 
+    enough to create a tool that makes a comparison analysis of financial metric}
   \end{itemexp}
   \smallbreak
   \smallbreak
@@ -227,22 +222,14 @@ new technological research
   \end{til}
   \smallbreak
   \begin{itemexp}
-<<<<<<< HEAD:cv_en/cv.tex
-    {Math Major}{January,2019-May,2023}{Universidad
-=======
     {Math Major}{January,2019 - May,2023}{Universidad
->>>>>>> 609826bccd10c833205a3b3a1ba01127d34a17e1:cv1.tex
     San Francisco de Quito}{Quito, Ecuador}
-    {\textit{Courses}: Numerical Analysis, Neural Networks, Differential 
+    {\textit{Courses}: Numerical Analysis, Neural Networks, Differential
     Geometry, Real Analysis, Stochastic Processes }
   \end{itemexp}
   \smallbreak
   \begin{itemexp}
-<<<<<<< HEAD:cv_en/cv.tex
-    {Computer Science Major}{January,2020-May,2024}{Universidad
-=======
-    {Computer Science Major}{January,2020 - May,2024}{Universidad
->>>>>>> 609826bccd10c833205a3b3a1ba01127d34a17e1:cv1.tex
+    {Computer Science Major}{January,2020 - Present}{Universidad
     San Francisco de Quito}{Quito, Ecuador}
     {\textit{Courses}: Artificial Intelligence, Databases, Computer
     Architecture, Java Programming, C++ Programming}
@@ -257,6 +244,7 @@ new technological research
   \smallbreak
   \begin{til}{Projects}{1}
   \end{til}
+  \smallbreak
   \begin{itemexp}
     {Testors}{August,2021 - May,2023}{Universidad
     San Francisco de Quito}{}
@@ -273,3 +261,4 @@ new technological research
   \end{itemexp}
 \end{minipage}
 \end{document}
+
