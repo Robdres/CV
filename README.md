@@ -1,8 +1,7 @@
 # CV
 
 To get my CV in english go to this link
-(CV in english)[./]
+[CV english](cv_en/cv.pdf)
 
 Para mi CV en español ve has click en este enlace
-
-(CV in spanish)[]
+[CV español](cv_es/cv.pdf)
