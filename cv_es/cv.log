@@ -2,8 +2,8 @@ This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./cv_en/cv.tex
-(cv_en/cv.tex
+**./cv_es/cv.tex
+(cv_es/cv.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 
@@ -888,27 +888,27 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \titlewidth=\dimen287
 \titlewidthlast=\dimen288
 \titlewidthfirst=\dimen289
-) (C:\Users\Roberto Andres\CV\cv_en\cv.aux)
+) (C:\Users\Roberto Andres\CV\cv_es\cv.aux)
 \openout1 = `cv.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -979,15 +979,15 @@ G,.JBIG2,.JB2,.eps]
 pdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 99.
- (C:\Users\Roberto Andres\CV\cv_en\cv.out)
-(C:\Users\Roberto Andres\CV\cv_en\cv.out)
+Package hyperref Info: Link coloring ON on input line 98.
+ (C:\Users\Roberto Andres\CV\cv_es\cv.out)
+(C:\Users\Roberto Andres\CV\cv_es\cv.out)
 \@outlinefile=\write4
 \openout4 = `cv.out'.
 
 
 contour: Using real outline for `Roberto Andrés Alvarado Moreira' on input lin
-e 104.
+e 103.
 
 (C:\Users\Roberto Andres\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\u
 fontawesomefree1.fd)
@@ -998,26 +998,33 @@ fontawesomebrands0.fd)
 (C:\Users\Roberto Andres\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\u
 fontawesomefree2.fd)
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree0 on i
-nput line 137.
+nput line 133.
 
 (C:\Users\Roberto Andres\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\u
 fontawesomefree0.fd)
-contour: Using real outline for `Senior R\&D Developer' on input line 200.
-contour: Using real outline for `Quant Internship' on input line 204.
-contour: Using real outline for `Junior Fullstack Engineer' on input line 209.
-contour: Using real outline for `Teaching Assistant' on input line 216.
-contour: Using real outline for `Master in Applied Artificial Intelligence' on 
-input line 225.
-contour: Using real outline for `Mathematics Major' on input line 231.
-contour: Using real outline for `Philosophy Minor' on input line 237.
-contour: Using real outline for `Testors' on input line 246.
-contour: Using real outline for `Palm Tree' on input line 250.
+LaTeX Font Info:    Trying to load font information for U+fontawesomebrands1 on
+ input line 156.
 
-Underfull \hbox (badness 3158) in paragraph at lines 250--251
-\T1/DejaVuSansCondensed-TLF/m/n/10.95 Created infrared-device per-for-mance met
--rics from palm tree
- []
+(C:\Users\Roberto Andres\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\u
+fontawesomebrands1.fd)
+LaTeX Font Info:    Font shape `U/fontawesomebrands1/solid/n' in size <9> not a
+vailable
+(Font)              Font shape `U/fontawesomebrands1/regular/n' tried instead o
+n input line 156.
 
+contour: Using real outline for `Desarrollador Senior de I\&D' on input line 18
+5.
+contour: Using real outline for `Práctica Quant' on input line 190.
+contour: Using real outline for `Ingeniero Fullstack Junior' on input line 195.
+
+contour: Using real outline for `Asistente de cátedra' on input line 201.
+contour: Using real outline for `Maestría en Inteligencia Artificial Aplicada'
+ on input line 210.
+contour: Using real outline for `Licenciatura en Matemáticas' on input line 21
+6.
+contour: Using real outline for `Minor en Filosofía' on input line 223.
+contour: Using real outline for `Testores' on input line 232.
+contour: Using real outline for `Palm Tree' on input line 236.
 [1
 
 {C:/Users/Roberto Andres/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/U
@@ -1027,7 +1034,8 @@ enc/dvips/fontawesome5/fa5free1.enc}{C:/Users/Roberto Andres/AppData/Local/Prog
 rams/MiKTeX/fonts/enc/dvips/fontawesome5/fa5brands0.enc}{C:/Users/Roberto Andre
 s/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free2.enc}{C:/U
 sers/Roberto Andres/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/
-fa5free0.enc}] (C:\Users\Roberto Andres\CV\cv_en\cv.aux)
+fa5free0.enc}{C:/Users/Roberto Andres/AppData/Local/Programs/MiKTeX/fonts/enc/d
+vips/fontawesome5/fa5brands1.enc}] (C:\Users\Roberto Andres\CV\cv_es\cv.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -1036,11 +1044,11 @@ Package rerunfilecheck Info: File `cv.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25027 strings out of 474476
- 488734 string characters out of 5739078
- 1961542 words of memory out of 5000000
- 46858 multiletter control sequences out of 15000+600000
- 594736 words of font info for 76 fonts, out of 8000000 for 9000
+ 25042 strings out of 474476
+ 489214 string characters out of 5739078
+ 1956542 words of memory out of 5000000
+ 46871 multiletter control sequences out of 15000+600000
+ 589374 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,9n,87p,412b,588s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Roberto Andres\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dp
@@ -1052,10 +1060,10 @@ javu/DejaVuSansCondensed.pfb><C:/Users/Roberto Andres/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb><C:/Users/R
 oberto Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/Fon
 tAwesome5Free-Solid.pfb>
-Output written on "C:\Users\Roberto Andres\CV\cv_en\cv.pdf" (1 page, 107657 byt
+Output written on "C:\Users\Roberto Andres\CV\cv_es\cv.pdf" (1 page, 120074 byt
 es).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
+ 79 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

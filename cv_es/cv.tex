@@ -1,11 +1,11 @@
-\documentclass[12pt]{article} 
-\usepackage[a4paper, margin=0.5in]{geometry}
+\documentclass[11pt]{article}
+\usepackage[a4paper, margin=0.4in]{geometry}
 \usepackage{trimclip}
 \usepackage{tabularx}
+\usepackage[outline]{contour}% http://ctan.org/pkg/contour
 \usepackage{tabto}
 \usepackage{blindtext}
-\usepackage{hyperref}
-\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref} \usepackage[dvipsnames]{xcolor}
 \usepackage{multicol}
 \usepackage{etoolbox}
 \usepackage{accsupp}
@@ -23,16 +23,19 @@
 \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
 \usepackage[T1]{fontenc}
 
-\def\columnseprulecolor{\color{NavyBlue}}
+\definecolor{Aquamarine}{rgb}{0.11, 0.34,0.45 }
+\def\columnseprulecolor{\color{Aquamarine}}
 \newcommand{\itemmarker}{{\small\textbullet}}
 \newcommand{\ratingmarker}{\scriptsize\faCircle}
 \setlength{\parindent}{0cm}
+\renewcommand{\baselinestretch}{1.06}
+
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=NavyBlue,
-    pdftitle={Overleaf Example},
+  filecolor=magenta,
+  urlcolor=Aquamarine,
+  pdftitle={cv},
     pdfpagemode=FullScreen,
     }
 
@@ -46,32 +49,44 @@
 \newenvironment{til}[2]
 {
   \large
-  \textcolor{NavyBlue}{\textbf{#1}}
+  \textcolor{Aquamarine}{\textbf{#1}}
   \vspace{0.05in}
-  \textcolor{NavyBlue}{\hrule}
+  \textcolor{Aquamarine}{\hrule}
 }{
   \vspace{0.05in}
 }
 
 \newenvironment{itemexp}[5]{
-  \textbf{#1} \hfill \begin{scriptsize}#2\end{scriptsize}\\
+  \contourlength{0.22pt}
+  \contournumber{10}%
+  \contour{black}{#1} \hfill \begin{scriptsize}#2\end{scriptsize}\\
   \scriptsize\textit{#3} \hfill \textit{#4}\\\normalsize
-  \footnotesize #5}{\smallbreak}
+  \normalsize #5}{\smallbreak}
 
 \newcommand{\cvskill}[2]{%
-  \textcolor{black}{\footnotesize{#1}}\hfill
+  \textcolor{black}{\small{#1}}\hfill
   \BeginAccSupp{method=plain,ActualText={#2}}
   \foreach \x in {1,...,5}{%
     \ifdimequal{\x pt - #2 pt}{0.5pt}%
-    {\clipbox*{0pt -0.25ex {.5\width} {\totalheight}}{\color{NavyBlue}\ratingmarker}%
-     \clipbox*{{.5\width} -0.25ex {\width} {\totalheight}}{\color{NavyBlue!30}\ratingmarker}}
-    {\ifdimgreater{\x bp}{#2 bp}{\color{NavyBlue!20}}{\color{NavyBlue}}\ratingmarker}%
+    {\clipbox*{0pt -0.25ex {.5\width} {\totalheight}}{\color{Aquamarine}\ratingmarker}%
+     \clipbox*{{.5\width} -0.25ex {\width} {\totalheight}}{\color{Aquamarine!30}\ratingmarker}}
+    {\ifdimgreater{\x bp}{#2 bp}{\color{Aquamarine!20}}{\color{Aquamarine}}\ratingmarker}%
   }\EndAccSupp{}
   \smallbreak\par%
 }
 
+\newcommand{\cvcertificate}[2]{%
+  \small{\textcolor{black}{\footnotesize{#1}}}\smallbreak
+  \tiny {#2}
+  \smallbreak\par%
+}
+
 \newcommand{\subtitle}[2]{
-  \textcolor{NavyBlue}{\textbf{#1}} \textcolor{NavyBlue}{\faIcon[solid]{#2}}\smallbreak
+  \textcolor{Aquamarine}{\textbf{#1}} \textcolor{Aquamarine}{\faIcon[solid]{#2}}\smallbreak
+}{}
+
+\newcommand{\subsubtitle}[1]{
+  \textcolor{Aquamarine}{\small\textbf{#1}}\smallbreak
 }{}
 
 \pagestyle{empty} % Suppress page numbers
@@ -80,24 +95,20 @@
 \usepackage{fancyhdr}
 \usepackage[explicit,]{titlesec}
 
-\AddToShipoutPictureBG{\color{NavyBlue!30}%
-\AtPageUpperLeft{\rule[-4.35cm]{\paperwidth}{5.5cm}}}%
-\AddToShipoutPictureBG{\color{NavyBlue!5}%
-\AtPageUpperLeft{\rule[-5.85cm]{\paperwidth}{1.6cm}}}%
-
 \begin{document}
 \medbreak
 \huge
-\textbf{Roberto Andrés Alvarado Moreira}
+\contourlength{0.22pt}
+\contournumber{10}%
+\contour{black}{Roberto Andrés Alvarado Moreira}
 \medbreak
 \footnotesize
-Motivado estudiante y programador dedicado al estudio de la matemática y sus aplicaciones
-dentro de la ciencia computacional y el desarrollo web, además apasionado sobre
-las nuevas tecnologías,
-inteligencia artificial, métodos de optimización y análisis numérico. Buscando
-oportunidades para aprender y adentrarme más en el mundo de las nuevas investigaciones tecnológicas
+\normalsize
+Desarrollador Senior de I\&D enfocado en verificación de chips, C++20 e innovación aplicada en IA.
+
+\vspace{-0.2cm}
 \small
-\textcolor{NavyBlue}{
+\textcolor{Aquamarine}{
   \begin{center}
     \begin{tabularx}{0.8\textwidth} { 
        >{\raggedright\arraybackslash}X 
@@ -108,7 +119,9 @@ oportunidades para aprender y adentrarme más en el mundo de las nuevas investig
     \end{tabularx}
   \end{center}
 }
+\normalsize
 \medbreak
+\vspace{0.05cm}
 \normalsize
 \begin{minipage}[t]{0.3\textwidth}
   \begin{til}{Herramientas}{1}
@@ -122,13 +135,17 @@ oportunidades para aprender y adentrarme más en el mundo de las nuevas investig
   \medbreak
   \subtitle{Lenguajes de Programación}{laptop}
   \medbreak
+  \cvskill{C++20}{5}
   \cvskill{Python}{5}
-  \cvskill{MySQL}{4.5}
-  \cvskill{JavaScript}{4.5}
-  \cvskill{Java}{4}
-  \cvskill{Latex}{4}
-  \cvskill{Matlab}{3}
   \cvskill{Rust}{3}
+  \cvskill{C}{3}
+  \cvskill{Bash}{3}
+  \cvskill{MySQL}{3}
+  \cvskill{Latex}{3}
+  \medbreak
+  \subtitle{IA}{robot}
+  \medbreak
+  \cvskill{Copilot}{4}
   \medbreak
   \subtitle{Herramientas de desarrollo}{keyboard}
   \medbreak
@@ -164,72 +181,59 @@ oportunidades para aprender y adentrarme más en el mundo de las nuevas investig
   \end{til}
   \smallbreak
   \begin{itemexp}
-    {Programador Junior}{Enero,2022-Presente}{Tecsicom}{Quito, Ecuador}
-    {Con un pequeño grupo de desarrolladores logramos crear un servidor web, creado en el framework Angular, para una empresa de publicidad de Ecuador y
-  seguimos trabajando para mejorarla}
+    {Desarrollador Senior de I\&D}{Junio,2023-Presente}{Synopsys}{Santiago, Chile}
+    {Desarrollé y mantuve algoritmos de verificación de chips. Entregué 5 proyectos de I\&D de escala completa y lideré la innovación de IA en Formality, logrando 60\% de uso activo y 90\% de adopción en pruebas entre desarrolladores.}
   \end{itemexp}
   \smallbreak
   \begin{itemexp}
-    {Investigador}{Junio,2021-Presente}{Universidad
-    San Francisco de Quito}{Quito, Ecuador}
-    {En el laboratorio de inteligencia artificial de la USFQ, he sido parte de
-    la investigación de redes neuronales para encontrar aplicaciones al mundo
-    real de la inteligencia artificial}
+    {Práctica Quant}{Mayo,2023-Junio,2023}{Ney Torres Investment Fund}{Quito, Ecuador}
+    {Analicé datos financieros y construí una herramienta comparativa para métricas de trading.}
   \end{itemexp}
   \smallbreak
   \begin{itemexp}
-    {Asistente de cátedra}{Junio,2022-Presente}{Universidad
-    San Francisco de Quito}{Quito, Ecuador}
-    {He ayudado y colaborado junto al profesor David Hervas como su asistente de
-    cátedra}
+    {Ingeniero Fullstack Junior}{Enero,2022-Febrero,2023}{Tecsicom}{Quito, Ecuador}
+    {Construí y entregué una plataforma basada en Angular para la operación diaria de una importante empresa de marketing en Ecuador.}
   \end{itemexp}
+  \smallbreak
   \begin{itemexp}
-    {Profesor Asistente}{Agosto,2019-Junio,2020}{Colegio de Bachillerato
-    Internacional Antonio Peña Celi}{Loja, Ecuador}
-    {Colaboré con varios profesores del colegio para manejar y mejorar el área
-    de matemáticas dentro del colegio además de ayudar en actividades
-  administrativas relacionadas con el Bachillerato Internacional}
+    {Asistente de cátedra}{Junio,2022-Marzo,2023}{Universidad
+    San Francisco de Quito}{Quito, Ecuador}
+    {Apoyé actividades académicas junto al profesor David Hervas, PhD en Matemáticas.}
   \end{itemexp}
   \smallbreak
   \begin{til}{Educación}{1}
   \end{til}
   \smallbreak
   \begin{itemexp}
-    {Licenciatura en Matemática}{Enero,2018-Presente}{Universidad
-    San Francisco de Quito}{Quito, Ecuador}
-    {\textit{Cursos}: Análisis Numérico, Redes Neuronales, Geometría
-    Diferencial, Análisis Real, Procesos Estocásticos}
+    {Maestría en Inteligencia Artificial Aplicada}{Abril,2025-Abril,2026}{Universidad
+    Tecnica Particular de Loja}{Loja, Ecuador}
+    {\textit{Cursos}: Redes Neuronales, Sistemas de Clasificación, Industria 4.0}
   \end{itemexp}
   \smallbreak
   \begin{itemexp}
-    {\small Ingeniería en Ciencias de la Computación}{Enero,2020-Presente}{Universidad
+    {Licenciatura en Matemáticas}{Enero,2019-Mayo,2023}{Universidad
     San Francisco de Quito}{Quito, Ecuador}
-    {\textit{Cursos}: Inteligencia Artificial, Base de datos, Arquitectura de
-    Computadores, Programación en Java, Programación en C++}
+    {\textit{Cursos}: Análisis Numérico, Redes Neuronales, Análisis Real}
   \end{itemexp}
   \smallbreak
   \begin{itemexp}
-    {Minor en Filosofía}{Junio,2018-Presente}{Universidad
+    {Minor en Filosofía}{Enero,2018-Mayo,2024}{Universidad
     San Francisco de Quito}{Quito, Ecuador}
-    {\textit{Cursos}: Filosofía de la religión, Historia de la filosofía, Process Philosophy,
+    {\textit{Cursos}: Filosofía de la religión, Historia de la filosofía, Filosofía del Proceso,
     Diálogos Platónicos}
   \end{itemexp}
   \smallbreak
   \begin{til}{Proyectos}{1}
   \end{til}
+  \smallbreak
   \begin{itemexp}
-    {Redes Neuronales}{Junio,2022-Presente}{Universidad
+    {Testores}{Agosto,2021-Mayo,2023}{Universidad
     San Francisco de Quito}{Quito, Ecuador}
-    {He sido parte de un conjunto de proyectos en miras a ser publicados para la
-    creación de programas basados en la inteligencia artificial basados en visión
-    computacional}
+    {Trabajé con métodos de testores (rough sets) para reducir atributos de clasificación y mejorar tiempos de procesamiento.}
   \end{itemexp}
   \begin{itemexp}
-    {Testores}{Agosto,2021-Presente}{Universidad
-    San Francisco de Quito}{Quito, Ecuador}
-    {Dentro del laboratorio de investigación de inteligencia artificial, he sido
-    parte del estudio de testores, o también conocidos como grupos rugosos de
-    características}
+    {Palm Tree}{Enero,2023-Mayo,2023}{}{Quito, Ecuador}
+    {Creé métricas de desempeño para dispositivos infrarrojos usando datos de palma en colaboración con NC State.}
   \end{itemexp}
 \end{minipage}
 \end{document}
